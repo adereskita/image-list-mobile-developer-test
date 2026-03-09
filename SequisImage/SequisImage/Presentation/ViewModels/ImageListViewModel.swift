@@ -16,7 +16,7 @@ final class ImageListViewModel: ObservableObject {
 
     private let getImagesUseCase: GetImagesUseCaseProtocol
     private var currentPage = 1
-    private let limit = 20
+    private let limit = 15
     private var isLastPage = false
 
     init(getImagesUseCase: GetImagesUseCaseProtocol) {
