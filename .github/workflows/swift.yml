@@ -27,7 +27,7 @@ jobs:
           xcodebuild clean build \
             -project SequisImage.xcodeproj \
             -scheme SequisImage \
-            -destination 'platform=iOS Simulator,name=iPhone 15 Pro,OS=latest' \
+            -destination 'generic/platform=iOS Simulator' \
             CODE_SIGN_IDENTITY="" \
             CODE_SIGNING_REQUIRED=NO \
             ONLY_ACTIVE_ARCH=NO
