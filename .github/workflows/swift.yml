@@ -9,6 +9,9 @@ on:
 jobs:
   build:
     runs-on: macos-latest
+    defaults:
+      run:
+        working-directory: SequisImage
 
     steps:
       - uses: actions/checkout@v4
