@@ -14,7 +14,6 @@ enum AppRoute: Hashable {
 
 @MainActor
 final class AppCoordinator: ObservableObject {
-    @Published var path = NavigationPath()
     @Published var currentRoute: AppRoute = .splash
 
     // Dependencies

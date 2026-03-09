@@ -29,11 +29,12 @@ struct ImageListView: View {
                 }
 
                 if viewModel.isLoading {
-                    HStack {
-                        Spacer()
-                        ProgressView()
-                        Spacer()
-                    }
+                    ImageRowView(item: nil, isLoading: true)
+                        .listRowInsets(EdgeInsets())
+                        .listRowSeparator(.hidden)
+                        .padding(.vertical, 8)
+                        .padding(.horizontal, 16)
+                        .background(Color(.systemGroupedBackground))
                 }
             }
             .listStyle(PlainListStyle())
@@ -49,28 +50,46 @@ struct ImageListView: View {
 }
 
 struct ImageRowView: View {
-    let item: ImageItem
+    let item: ImageItem?
+    var isLoading: Bool = false
+    @State private var isBlinking = false
 
     var body: some View {
         HStack(spacing: 0) {
-            KFImage(item.downloadUrl)
-                .placeholder {
-                    ProgressView()
-                        .frame(width: 100, height: 100)
-                }
-                .resizable()
-                .scaledToFill()
-                .frame(width: 100, height: 100)
-                .clipped()
-                .frame(width: 100, height: 100)
+            if isLoading {
+                Color.gray.opacity(0.3)
+                    .frame(width: 100, height: 100)
+            } else if let item = item {
+                KFImage(item.downloadUrl)
+                    .downsampling(size: CGSize(width: 200, height: 200))
+                    .cacheOriginalImage()
+                    .placeholder {
+                        ProgressView()
+                            .frame(width: 100, height: 100)
+                    }
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 100, height: 100)
+                    .clipped()
+                    .frame(width: 100, height: 100)
+            }
 
-            VStack {
-                Text("Author:")
-                    .font(.headline)
-                    .fontWeight(.bold)
-                Text(item.author)
-                    .font(.subheadline)
-                    .fontWeight(.bold)
+            VStack(spacing: isLoading ? 8 : 0) {
+                if isLoading {
+                    Color.gray.opacity(0.3)
+                        .frame(width: 80, height: 20)
+                        .cornerRadius(4)
+                    Color.gray.opacity(0.3)
+                        .frame(width: 120, height: 16)
+                        .cornerRadius(4)
+                } else if let item = item {
+                    Text("Author:")
+                        .font(.headline)
+                        .fontWeight(.bold)
+                    Text(item.author)
+                        .font(.subheadline)
+                        .fontWeight(.bold)
+                }
             }
             .frame(maxWidth: .infinity)
             .multilineTextAlignment(.center)
@@ -78,6 +97,14 @@ struct ImageRowView: View {
         .background(Color.white)
         .cornerRadius(12)
         .shadow(color: Color.black.opacity(0.1), radius: 4, x: 0, y: 2)
+        .opacity(isLoading && isBlinking ? 0.3 : 1.0)
+        .onAppear {
+            if isLoading {
+                withAnimation(.easeInOut(duration: 0.8).repeatForever(autoreverses: true)) {
+                    isBlinking = true
+                }
+            }
+        }
     }
 }
 
