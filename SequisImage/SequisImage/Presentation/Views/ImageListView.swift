@@ -67,6 +67,17 @@ struct ImageListView: View {
                     label: { EmptyView() }
                 )
             )
+            .alert(
+                "Error",
+                isPresented: Binding<Bool>(
+                    get: { viewModel.errorMessage != nil },
+                    set: { if !$0 { viewModel.errorMessage = nil } }
+                )
+            ) {
+                Button("Retry") { viewModel.fetchImages() }
+            } message: {
+                Text(viewModel.errorMessage ?? "An unknown error occurred.")
+            }
         }
     }
 }
