@@ -12,6 +12,10 @@
 		2EEF5A8D07FF8A943FC90D6A /* CommentGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CD443CD783958A33EC5C8F /* CommentGenerator.swift */; };
 		664FD8A6CFCE4BE0B3620685 /* SequisImage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3D58E67AA2F49966D0391D2B /* SequisImage.xcdatamodeld */; };
 		82544E844D34996B733FA81A /* CommentLocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6701296B8653A0614EE45420 /* CommentLocalRepository.swift */; };
+		E619DBBF2F601CDC00010733 /* MockGetImagesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E619DBBE2F601CDC00010733 /* MockGetImagesUseCase.swift */; };
+		E619DBC02F601CDC00010733 /* ImageListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E619DBBD2F601CDC00010733 /* ImageListViewModelTests.swift */; };
+		E619DBC32F60206900010733 /* ImageDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E619DBC12F60206900010733 /* ImageDetailViewModelTests.swift */; };
+		E619DBC42F60206900010733 /* MockCommentLocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E619DBC22F60206900010733 /* MockCommentLocalRepository.swift */; };
 		E61C90822F5F910F00630087 /* AppCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61C907D2F5F910F00630087 /* AppCoordinatorView.swift */; };
 		E61C90832F5F910F00630087 /* ImageListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61C907A2F5F910F00630087 /* ImageListViewModel.swift */; };
 		E61C90842F5F910F00630087 /* ImageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61C907F2F5F910F00630087 /* ImageListView.swift */; };
@@ -39,6 +43,16 @@
 		FEAFCF46647F97FB8C8983EB /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 170C82FC710D647897A4718D /* Contents.json */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		E619DBB52F601ACF00010733 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6EEAAC22F5F348300BBCDAE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E6EEAAC92F5F348300BBCDAE;
+			remoteInfo = SequisImage;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		05F4CEE431BBC9718AB370EC /* CommentLocalRepositoryProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CommentLocalRepositoryProtocol.swift; sourceTree = "<group>"; };
 		170C82FC710D647897A4718D /* Contents.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
@@ -47,6 +61,11 @@
 		6701296B8653A0614EE45420 /* CommentLocalRepository.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CommentLocalRepository.swift; sourceTree = "<group>"; };
 		70CAF69E12C7AE862814171E /* Contents.json */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
 		A5CD443CD783958A33EC5C8F /* CommentGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CommentGenerator.swift; sourceTree = "<group>"; };
+		E619DBB12F601ACF00010733 /* SequisImageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SequisImageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E619DBBD2F601CDC00010733 /* ImageListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListViewModelTests.swift; sourceTree = "<group>"; };
+		E619DBBE2F601CDC00010733 /* MockGetImagesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGetImagesUseCase.swift; sourceTree = "<group>"; };
+		E619DBC12F60206900010733 /* ImageDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewModelTests.swift; sourceTree = "<group>"; };
+		E619DBC22F60206900010733 /* MockCommentLocalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCommentLocalRepository.swift; sourceTree = "<group>"; };
 		E61C90792F5F910F00630087 /* ImageDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailViewModel.swift; sourceTree = "<group>"; };
 		E61C907A2F5F910F00630087 /* ImageListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListViewModel.swift; sourceTree = "<group>"; };
 		E61C907B2F5F910F00630087 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
@@ -73,6 +92,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E619DBAE2F601ACF00010733 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E6EEAAC72F5F348300BBCDAE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -121,6 +147,17 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
+		E619DBBB2F601AD600010733 /* SequisImageTests */ = {
+			isa = PBXGroup;
+			children = (
+				E619DBBD2F601CDC00010733 /* ImageListViewModelTests.swift */,
+				E619DBBE2F601CDC00010733 /* MockGetImagesUseCase.swift */,
+				E619DBC12F60206900010733 /* ImageDetailViewModelTests.swift */,
+				E619DBC22F60206900010733 /* MockCommentLocalRepository.swift */,
+			);
+			path = SequisImageTests;
+			sourceTree = "<group>";
+		};
 		E61C907C2F5F910F00630087 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				E6EEAB252F5F3FFF00BBCDAE /* SequisImage */,
+				E619DBBB2F601AD600010733 /* SequisImageTests */,
 				E6EEAACB2F5F348300BBCDAE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -174,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				E6EEAACA2F5F348300BBCDAE /* SequisImage.app */,
+				E619DBB12F601ACF00010733 /* SequisImageTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -277,6 +316,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		E619DBB02F601ACF00010733 /* SequisImageTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E619DBB92F601ACF00010733 /* Build configuration list for PBXNativeTarget "SequisImageTests" */;
+			buildPhases = (
+				E619DBAD2F601ACF00010733 /* Sources */,
+				E619DBAE2F601ACF00010733 /* Frameworks */,
+				E619DBAF2F601ACF00010733 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E619DBB62F601ACF00010733 /* PBXTargetDependency */,
+			);
+			name = SequisImageTests;
+			packageProductDependencies = (
+			);
+			productName = SequisImageTests;
+			productReference = E619DBB12F601ACF00010733 /* SequisImageTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		E6EEAAC92F5F348300BBCDAE /* SequisImage */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E6EEAAD52F5F348400BBCDAE /* Build configuration list for PBXNativeTarget "SequisImage" */;
@@ -309,6 +368,11 @@
 				LastSwiftUpdateCheck = 1640;
 				LastUpgradeCheck = 1640;
 				TargetAttributes = {
+					E619DBB02F601ACF00010733 = {
+						CreatedOnToolsVersion = 16.4;
+						LastSwiftMigration = 1640;
+						TestTargetID = E6EEAAC92F5F348300BBCDAE;
+					};
 					E6EEAAC92F5F348300BBCDAE = {
 						CreatedOnToolsVersion = 16.4;
 					};
@@ -333,11 +397,19 @@
 			projectRoot = "";
 			targets = (
 				E6EEAAC92F5F348300BBCDAE /* SequisImage */,
+				E619DBB02F601ACF00010733 /* SequisImageTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E619DBAF2F601ACF00010733 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E6EEAAC82F5F348300BBCDAE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -354,6 +426,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E619DBAD2F601ACF00010733 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E619DBBF2F601CDC00010733 /* MockGetImagesUseCase.swift in Sources */,
+				E619DBC32F60206900010733 /* ImageDetailViewModelTests.swift in Sources */,
+				E619DBC42F60206900010733 /* MockCommentLocalRepository.swift in Sources */,
+				E619DBC02F601CDC00010733 /* ImageListViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E6EEAAC62F5F348300BBCDAE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -384,7 +467,54 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		E619DBB62F601ACF00010733 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E6EEAAC92F5F348300BBCDAE /* SequisImage */;
+			targetProxy = E619DBB52F601ACF00010733 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		E619DBB72F601ACF00010733 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L6N9NGKD3Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ade.reskita.SequisImageTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SequisImage.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SequisImage";
+			};
+			name = Debug;
+		};
+		E619DBB82F601ACF00010733 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L6N9NGKD3Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ade.reskita.SequisImageTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SequisImage.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SequisImage";
+			};
+			name = Release;
+		};
 		E6EEAAD32F5F348400BBCDAE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -567,6 +697,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E619DBB92F601ACF00010733 /* Build configuration list for PBXNativeTarget "SequisImageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E619DBB72F601ACF00010733 /* Debug */,
+				E619DBB82F601ACF00010733 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E6EEAAC52F5F348300BBCDAE /* Build configuration list for PBXProject "SequisImage" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
