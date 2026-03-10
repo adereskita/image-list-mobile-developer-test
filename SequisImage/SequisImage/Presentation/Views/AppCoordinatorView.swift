@@ -17,5 +17,6 @@ struct AppCoordinatorView: View {
                 ImageListView(viewModel: viewModel)
             }
         }
+        .environmentObject(coordinator)
     }
 }

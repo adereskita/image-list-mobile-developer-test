@@ -15,6 +15,7 @@ enum AppRoute: Hashable {
 @MainActor
 final class AppCoordinator: ObservableObject {
     @Published var currentRoute: AppRoute = .splash
+    @Published var selectedImageItem: ImageItem?
 
     // Dependencies
     private lazy var imageRepository = ImageRepository()
@@ -22,5 +23,13 @@ final class AppCoordinator: ObservableObject {
 
     func navigate(to route: AppRoute) {
         currentRoute = route
+    }
+
+    func showDetail(for item: ImageItem) {
+        selectedImageItem = item
+    }
+
+    func imageDetailViewModel(for item: ImageItem) -> ImageDetailViewModel {
+        return ImageDetailViewModel(imageItem: item)
     }
 }

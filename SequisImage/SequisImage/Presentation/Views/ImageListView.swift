@@ -10,22 +10,28 @@ import SwiftUI
 
 struct ImageListView: View {
     @StateObject var viewModel: ImageListViewModel
+    @EnvironmentObject var coordinator: AppCoordinator
 
     var body: some View {
         NavigationView {
             List {
                 ForEach(viewModel.images) { item in
-                    ImageRowView(item: item)
-                        .onAppear {
-                            if item == viewModel.images.last {
-                                viewModel.fetchImages()
+                    Button(action: {
+                        coordinator.showDetail(for: item)
+                    }) {
+                        ImageRowView(item: item)
+                            .onAppear {
+                                if item == viewModel.images.last {
+                                    viewModel.fetchImages()
+                                }
                             }
-                        }
-                        .listRowInsets(EdgeInsets())
-                        .listRowSeparator(.hidden)
-                        .padding(.vertical, 8)
-                        .padding(.horizontal, 16)
-                        .background(Color(.systemGroupedBackground))
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                    .listRowInsets(EdgeInsets())
+                    .listRowSeparator(.hidden)
+                    .padding(.vertical, 8)
+                    .padding(.horizontal, 16)
+                    .background(Color(.systemGroupedBackground))
                 }
 
                 if viewModel.isLoading {
@@ -45,6 +51,22 @@ struct ImageListView: View {
                     viewModel.fetchImages()
                 }
             }
+            .background(
+                NavigationLink(
+                    isActive: Binding(
+                        get: { coordinator.selectedImageItem != nil },
+                        set: { if !$0 { coordinator.selectedImageItem = nil } }
+                    ),
+                    destination: {
+                        if let item = coordinator.selectedImageItem {
+                            ImageDetailView(viewModel: coordinator.imageDetailViewModel(for: item))
+                        } else {
+                            EmptyView()
+                        }
+                    },
+                    label: { EmptyView() }
+                )
+            )
         }
     }
 }
