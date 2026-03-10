@@ -9,9 +9,11 @@
 Unit tests are located in the `SequisImageTests` target, focusing on ViewModels and Data layers to ensure business logic reliability.
 
 Overview of the Project:
+
 ![Simulator Screen Recording - iPhone 16 Pro - 2026-03-10 at 19 56 22](https://github.com/user-attachments/assets/95d490d2-6320-40d8-8183-f062ab9e281d)
 
 Unit Testing Result:
+
 <img width="438" height="423" alt="Screenshot 2026-03-10 at 19 55 48" src="https://github.com/user-attachments/assets/17eb9f84-0296-48cd-9756-f9956d28c6cd" />
 
 ## 🛠 Technology Stack
